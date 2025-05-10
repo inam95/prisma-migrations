@@ -1,0 +1,32 @@
+{
+  "name": "prisma-migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "prisma db seed",
+    "prisma:migration:create": "prisma migrate dev --create-only",
+    "prisma:studio": "prisma studio",
+    "prisma:push": "prisma db push",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:rollback": "prisma migrate resolve --rolled-back"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "prisma": "^6.7.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "6.7.0"
+  },
+  "prisma": {
+    "schema": "./prisma",
+    "seed": "tsx prisma/seed.ts"
+  }
+}
